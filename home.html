@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Baloo+2:wght@600&display=swap">
+  
+  <style>
+    .navbar{
+      width: 100%;
+      background-color: lightblue;
+      display: flex;
+      justify-content: space-between;
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      z-index: 1000;
+    
+      
+    }
+   
+    .title{
+      padding-left: 5px;
+      font-family: "Times New Roman", Times, serif;
+      font-style: italic;
+      font-weight: bold;
+      font-variant: small-caps;
+    }
+    .elements{
+      padding-right:20px ;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center; 
+      
+    }
+    .navcontent:hover{
+      color:rgb(183, 183, 148);
+      font-size: 1.25em;
+      
+
+
+    }
+    .offer-trade{
+      margin-bottom: 0;
+  font-family:'Poppins',sans-serif ;
+  font-weight: 550;
+  color: rgb(59, 57, 57);
+    }
+    .value-deal{
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 50px;
+      font-family: 'Poppins',sans-serif;
+      font-weight: 600;
+
+    }
+    .all-products{
+      margin-top: 0;
+      margin-bottom: 0;
+      color: lightblue;
+      font-size: 50px;
+      font-family: 'Poppins',sans-serif;
+      font-weight:500;
+    }
+    .coupons{
+      margin-top: 0;
+      font-family: 'Poppins',sans-serif;
+      color: gray;
+    }
+    .shop-button{
+      padding: 5px 30px;
+      border: none;
+      border-radius: 30px;
+      background-color: lightblue;
+      font-family: 'Poppins',sans-serif;
+    }
+    .first-info{
+      margin-top: 150px;
+      margin-left: 50px;
+      display:inline-block ;
+      
+    }
+    .model-image{
+      position: absolute;
+      height: 500px;
+      width: 800px;
+      border-radius: 10px;
+     margin-top: -25px;
+      margin-left: 200px;
+      position: absolute;
+    }
+    .shop-info{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 90px;
+      background:linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)),url('Royal Blue Menswear.webp');
+      background-size: cover; 
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 800px;
+    
+      
+      
+
+      
+    }
+    .shop-availability-image-grid{
+      height: auto;
+      width: 90%;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-auto-rows: minmax(200px,auto);
+      gap: 10px;
+      margin-right: 195px;
+
+
+    }
+    .shop-availability-image1{
+       width: 200px;
+      height: 230px;
+      object-fit: cover; 
+    }
+    .shop-availability-image2{
+       width: 200px;
+      height: 230px;
+      object-fit: cover; 
+    }
+    .shop-availability-image3{
+       width: 200px;
+      height: 230px;
+      object-fit: cover; 
+    }
+    .shop-availability-image4{
+       width: 200px;
+      height: 230px;
+      object-fit: cover; 
+    }
+    .shop-availability-image5{
+       width: 200px;
+      height: 230px;
+      object-fit: cover; 
+    }
+    .shop-availability-image6{
+       width: 200px;
+      height: 230px;
+      object-fit: cover; 
+    }
+    .shop-availability-image7{
+       width: 200px;
+      height: 230px;
+      object-fit: cover; 
+    }
+    .shop-availability-image8{
+       width: 200px;
+      height: 230px;
+      object-fit: cover; 
+      transition: all 0.3s ease-in-out;
+    }
+    .shop-availability-image9{
+       width: 200px;
+      height: 230px;
+      object-fit: cover; 
+    }
+    .first-avilability{
+      position: relative;
+    }
+    .first-avilability .availabilityname1{
+       position: absolute;
+       bottom: 0px;
+       left: 34px;
+       color: white;
+       
+    }
+    .second-avilability{
+      position: relative;
+    }
+    .second-avilability .availabilityname2{
+       position: absolute;
+       bottom: 0px;
+       left: 34px;
+       color: white;
+       
+    }
+     
+    .third-avilability{
+      position: relative;
+    }
+    .third-avilability .availabilityname3{
+       position: absolute;
+       bottom: 0px;
+       left: 70px;
+       color: white;
+       
+    }
+    
+    .fourth-avilability{
+      position: relative;
+    }
+    .fourth-avilability .availabilityname4{
+       position: absolute;
+       bottom: 0px;
+       left: 50px;
+       color: white;
+       
+    }
+    .fifth-avilability{
+      position: relative;
+    }
+    .fifth-avilability .availabilityname5{
+       position: absolute;
+       bottom: 0px;
+       left: 73px;
+       color: white;
+       
+    }
+
+    .sixth-avilability{
+      position: relative;
+    }
+    .sixth-avilability .availabilityname6{
+       position: absolute;
+       bottom: 0px;
+       left: 60px;
+       color: white;
+       
+    }
+
+    .seventh-avilability{
+      position: relative;
+    }
+    .seventh-avilability .availabilityname7{
+       position: absolute;
+       bottom: 0px;
+       left: 40px;
+       color: white;
+       
+    }
+
+    .eight-avilability{
+      position: relative;
+    }
+    .eight-avilability .availabilityname8{
+       position: absolute;
+       bottom: 0px;
+       left: 34px;
+       color: white;
+       
+    }
+
+    .ninth-avilability{
+      position: relative;
+    }
+    .ninth-avilability .availabilityname9{
+       position: absolute;
+       bottom: 0px;
+       left: 50px;
+       color: white;
+       
+    }
+    h3{
+      font-family: Arial;
+      font-weight: bold;
+    }
+    .info{
+      margin-top: -50px;
+    }
+    .category{
+      margin-left: 200px;
+    }
+    .first-avilability{
+      display: inline-block;
+      overflow: hidden;
+      position: relative;
+    }
+    .first-avilability img{
+      width: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+    .first-avilability:hover img{
+      cursor: pointer;
+      transform: scale(1.2);
+      
+    }
+    .second-avilability{
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+    }
+    .second-avilability img{
+      width: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+    .second-avilability:hover img{
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+    .third-avilability{
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+    }
+    .third-avilability img{
+      width: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+    .third-avilability:hover img{
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+    .fourth-avilability{
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+    }
+    .fourth-avilability img{
+      width: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+    .fourth-avilability:hover img{
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+    .fifth-avilability{
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+    }
+    .fifth-avilability img{
+      width: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+    .fifth-avilability:hover img{
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+    .sixth-avilability{
+      
+      display: inline-block;
+      overflow: hidden;
+    }
+    .sixth-avilability img{
+      width: 100%;
+      transition: transform 0.6s ease-out; 
+    }
+    .sixth-avilability:hover img{
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+    .seventh-avilability{
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+    }
+    .seventh-avilability img{
+      width: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+    .seventh-avilability:hover img{
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+    .eight-avilability{
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+    }
+    .eight-avilability img{
+      width: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+    .eight-avilability:hover img{
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+    .ninth-avilability{
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+    }
+    .ninth-avilability img{
+      width: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+    .ninth-avilability:hover img{
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  .category{
+    padding-top: 15px;
+  }
+  main{
+    padding-top: 50px;
+  }
+  .active{
+    color: red;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="title">Royal Mens Wear</h1>
+    
+      <div class="elements">
+        <h3 class="navcontent">Home</h3>
+        <h3 class="navcontent" onclick="routetoshop();">Shop</h3>
+        <h3 class="navcontent" onclick="login()">LogIn</h3>
+        <h3 class="navcontent">About</h3>
+        <h3 class="navcontent">contact</h3>
+      </div>
+      
+    
+  </nav>
+  <main> 
+    <div class="first-info">
+      <p class="offer-trade">Trade in offer</p>
+      <p class="value-deal">Super value Deals</p>
+      <p class="all-products">On all products</p>
+      <p class="coupons">Save More With Coupons & upto 70% off!</p>
+      <button class="shop-button" onclick="routetoshop()">Shop Now</button>
+      
+    </div>
+    <img class="model-image" src="clothing_bag3-removebg-preview.png" >
+  
+    <div class="shop-info" >
+      <div class="info">
+        <h1 class="category">Featured Categories</h1>
+        <div class="shop-availability-image-grid">
+          <div class="first-avilability" onclick="paydeal();">
+            <img class="shop-availability-image1" src="image 1 for shop.webp" >
+            <div class="availabilityname1">
+             <h3>PAYDAY DEAL</h3> 
+            </div>
+          </div>
+          <div class="second-avilability" onclick="checkshirts();">
+            <img class="shop-availability-image2" src="image2 for shop.webp" >
+            <div class="availabilityname2">
+              <h3>CHECK SHIRTS</h3>
+            </div>
+            
+          </div>
+  
+          <div class="third-avilability" onclick="basics();">
+            <img class="shop-availability-image3" src="image3 for shop.webp" alt="">
+            <div class="availabilityname3">
+              <h3>BASICS</h3>
+            </div>
+           
+          </div>
+  
+          <div class="fourth-avilability" onclick="trousers();"> 
+            <img class="shop-availability-image4" src="image4 for shop.webp" alt="">
+            <div class="availabilityname4">
+              <h3>TROUSERS</h3>
+            </div>
+           
+          </div>
+  
+          <div class="fifth-avilability" onclick="jeans();">
+            <img class="shop-availability-image5" src="image5 for shop.webp" alt="">
+            <div class="availabilityname5">
+              <h3>JEANS</h3>
+            </div>
+            
+          </div>
+  
+          <div class="sixth-avilability" onclick="cargos();">
+            <img class="shop-availability-image6" src="image6 for shop.webp" alt="">
+            <div class="availabilityname6">
+              <h3>CARGOS</h3>
+            </div>
+            
+          </div>
+  
+          <div class="seventh-avilability" onclick="sunglasses();">
+            <img class="shop-availability-image7" src="image7 for shop.webp" alt="">
+            <div class="availabilityname7">
+              <h3>SUNGLASSES</h3>
+            </div>
+           
+          </div>
+  
+          <div class="eight-avilability" onclick="snitchluxe();">
+            <img class="shop-availability-image8" src="image8 for shop.webp" alt="">
+            <div class="availabilityname8">
+              <h3>SNITCH LUXE</h3>
+            </div>
+            
+          </div>
+  
+          <div class="ninth-avilability" onclick="plussize()">
+            <img class="shop-availability-image9" src="image9 for shop.webp" alt="">
+            <div class="availabilityname9">
+              <h3>PLUS SIZE</h3>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+        
+      </div>
+     
+  </main>
+  
+
+
+
+  <script>
+    function login(){
+    window.location.href="login.html";
+    
+    
+    }
+
+    function routetoshop(){
+      window.location.href="shop.html"
+    }
+
+    function paydeal(){
+      window.location.href="https://www.snitch.com/men-payday-deal/309427011746/buy"
+    }
+
+   function checkshirts(){
+    window.location.href="https://www.snitch.com/men-check-shirts/buy?pattern=Checks";
+   }
+
+   function basics(){
+    window.location.href="https://www.snitch.com/men-basics/309676441762/buy";
+   }
+  
+  function trousers(){
+    window.location.href="https://www.snitch.com/men-trousers/buy";
+  }
+
+  function jeans(){
+    window.location.href="https://www.snitch.com/men-jeans/buy";
+  }
+
+  function cargos(){
+     window.location.href="https://www.snitch.com/men-cargo-pants/buy";
+  }
+
+  function sunglasses(){
+    window.location.href="https://www.snitch.com/men-sunglasses/buy";
+  }
+
+  function snitchluxe(){
+    window.location.href="https://www.snitch.com/men-snitch-luxe/buy?style=Snitch+LUXE";
+  }
+
+  function plussize(){
+    window.location.href="https://www.snitch.com/men-plus-size/281344016546/buy";
+  }
+
+
+
+
+  
+
+  </script>
+</body>
+</html>

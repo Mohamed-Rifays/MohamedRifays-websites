@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    
+   
+     
+      
+    
+    .form-fields{
+    
+      
+     
+      width: 400px;
+      height: 520px;
+      padding-top: 10px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: -5px -5px 10px rgba(0,0,0,0.1),
+      5px 5px 10px  rgba(0,0,0,0.1);
+      font-family: Arial;
+      margin-left: 37%;
+      
+     
+    }
+    .login-option{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      margin-top:10% ;
+    }
+    .other-option-button{
+      padding: 5px 10px;
+      border: none;
+      border-radius: 15px;
+      width: 150px;
+      background-color: lightblue;
+     
+    }
+    .input-field{
+      width:90%;
+      flex: 1;
+      margin-left: 14px;
+      height: 30px; 
+      border-radius: 10px;
+      border: none;
+      background-color: rgb(244, 244, 244);
+    }
+    .title{
+      margin-left: 5px;
+    }
+    .login-button{
+      margin-top: 20px;
+      margin-left: 20px;
+      padding: 5px 30px;
+      background-color: lightblue;
+      border: none;
+      border-radius: 20px;
+    }
+    .navbar{
+      width: 100%;
+      background-color: lightblue;
+      display: flex;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      
+    }
+   
+    .title{
+      padding-left: 5px;
+      font-family: "Times New Roman", Times, serif;
+      font-style: italic;
+      font-weight: bold;
+      font-variant: small-caps;
+    }
+    .elements{
+      padding-right:20px ;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center; 
+      
+    }
+    .navcontent:hover{
+      color:rgb(183, 183, 148);
+      font-size: 1.25em;
+      
+
+
+    }
+    main{
+      padding-top: 45px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="navbar">
+      <h1 class="title">Stylish Fashion</h1>
+      
+        <div class="elements">
+          <h3 class="navcontent" onclick="renderhome();">Home</h3>
+          <h3 class="navcontent" onclick="window.location.href='shop.html' ">Shop</h3>
+          <h3 class="navcontent" onclick="login()">LogIn</h3>
+          <h3 class="navcontent">About</h3>
+          <h3 class="navcontent">contact</h3>
+        </div>
+        
+      
+    </nav>
+    <center> <h1>Login Form</h1></center>
+   
+    <div class="form-conatiner">
+      <div class="form-fields">
+        <p class="title" for="name">Name:</p>
+        <input class="input-field" type="text">
+        <p class="title">Email:</p>
+        <input class="input-field"  type="email">
+        <p class="title">Phone No:</p>
+        <input class="input-field"  type="text">
+        <p class="title">Address:</p>
+        <input class="input-field"  type="text">
+        <button onclick="redirect()" class="login-button">
+          Log In
+        </button>
+  
+        <div class="login-option">
+          <label for="">Other Options</label>
+          <button class="other-option-button">LogIn With Google</button>
+      <button class="other-option-button">LogIn With Facebook</button>
+        </div>
+        
+      </div>
+      
+    </div>
+  </main>
+  
+  <script>
+    function redirect(){
+      window.location.href="home.html"
+      
+    }
+
+    function renderhome(){
+      window.location.href="home.html";
+    }
+  </script>
+</body>
+</html>
